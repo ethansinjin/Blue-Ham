@@ -59,8 +59,8 @@
                                             </mask>
                                         </variation>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="log:~ usr$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKI-X7-Fbt">
-                                        <rect key="frame" x="263" y="8" width="75" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="log:~ send$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKI-X7-Fbt">
+                                        <rect key="frame" x="257" y="8" width="86" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="K18-zV-8BA"/>
                                             <constraint firstAttribute="height" constant="20" id="mhK-qX-742"/>
@@ -68,6 +68,11 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="K18-zV-8BA"/>
+                                            </mask>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -229,13 +234,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EAc-F9-F3T" userLabel="Message View">
                                 <rect key="frame" x="0.0" y="52" width="600" height="250"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwg-e1-P6k">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Waiting to receive message" translatesAutoresizingMaskIntoConstraints="NO" id="hwg-e1-P6k">
                                         <rect key="frame" x="20" y="30" width="560" height="212"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="206" id="6Dr-UU-eHP"/>
                                         </constraints>
-                                        <string key="text">Type a message here and press Transmit. It will be Hamming (7,4) encoded and broadcast to nearby iOS devices over Bluetooth. ASCII characters are allowed. Other devices should use the Receive tab.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="alphabet"/>
                                         <variation key="default">
@@ -292,14 +296,19 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="log:~ usr$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAj-2U-q1e">
-                                        <rect key="frame" x="263" y="8" width="75" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="log:~ receive$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAj-2U-q1e">
+                                        <rect key="frame" x="249" y="8" width="102" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="rIl-r3-1Ia"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="rIl-r3-1Ia"/>
+                                            </mask>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -378,8 +387,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Hamming (7,4) Codes using Bluetooth!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="tkV-7P-eWE">
-                                <rect key="frame" x="130" y="71" width="341" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Hamming (7,4) Codes using Bluetooth!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="tkV-7P-eWE">
+                                <rect key="frame" x="20" y="71" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -400,8 +409,8 @@
                                     <constraint firstAttribute="height" constant="256" id="xil-kq-Wc2"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Ethan Gill under LGPL License" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="gYu-nD-2Ih">
-                                <rect key="frame" x="130" y="522" width="341" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Ethan Gill. Released under LGPL License." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="gYu-nD-2Ih">
+                                <rect key="frame" x="20" y="522" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -410,10 +419,12 @@
                         <color key="backgroundColor" red="0.0" green="0.44313725490196076" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="oQY-nI-2Eg" secondAttribute="centerY" id="1gA-wM-N0A"/>
+                            <constraint firstItem="tkV-7P-eWE" firstAttribute="leading" secondItem="CQl-0H-RNf" secondAttribute="leading" constant="20" symbolic="YES" id="A7M-Np-M5w"/>
                             <constraint firstAttribute="centerX" secondItem="o81-dh-2k6" secondAttribute="centerX" id="B6b-Jr-3Zt"/>
                             <constraint firstItem="tkV-7P-eWE" firstAttribute="trailing" secondItem="gYu-nD-2Ih" secondAttribute="trailing" id="LNq-zI-xMv"/>
                             <constraint firstAttribute="bottom" secondItem="gYu-nD-2Ih" secondAttribute="bottom" constant="57" id="MiD-qi-HQE"/>
                             <constraint firstAttribute="centerX" secondItem="oQY-nI-2Eg" secondAttribute="centerX" id="WN3-uf-7PV"/>
+                            <constraint firstAttribute="trailing" secondItem="tkV-7P-eWE" secondAttribute="trailing" constant="20" symbolic="YES" id="dUJ-KV-gQ8"/>
                             <constraint firstItem="tkV-7P-eWE" firstAttribute="top" secondItem="o81-dh-2k6" secondAttribute="bottom" constant="8" symbolic="YES" id="k6C-Xs-LRF"/>
                             <constraint firstItem="tkV-7P-eWE" firstAttribute="leading" secondItem="gYu-nD-2Ih" secondAttribute="leading" id="qlf-UK-42I"/>
                             <constraint firstAttribute="centerX" secondItem="tkV-7P-eWE" secondAttribute="centerX" id="rYM-fg-qvN"/>
