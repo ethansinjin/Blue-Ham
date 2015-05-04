@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7AE3EA51AF7EB0700A12D0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE3EA41AF7EB0700A12D0C /* main.m */; };
+		F7AE3EA81AF7EB0700A12D0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE3EA71AF7EB0700A12D0C /* AppDelegate.m */; };
+		F7AE3EAB1AF7EB0700A12D0C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE3EAA1AF7EB0700A12D0C /* FirstViewController.m */; };
+		F7AE3EAE1AF7EB0700A12D0C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE3EAD1AF7EB0700A12D0C /* SecondViewController.m */; };
+		F7AE3EB11AF7EB0700A12D0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AE3EAF1AF7EB0700A12D0C /* Main.storyboard */; };
+		F7AE3EB31AF7EB0700A12D0C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AE3EB21AF7EB0700A12D0C /* Images.xcassets */; };
+		F7AE3EB61AF7EB0700A12D0C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7AE3EB41AF7EB0700A12D0C /* LaunchScreen.xib */; };
+		F7AE3EC21AF7EB0700A12D0C /* Blue_HamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE3EC11AF7EB0700A12D0C /* Blue_HamTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7AE3EBC1AF7EB0700A12D0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7AE3E971AF7EB0700A12D0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7AE3E9E1AF7EB0700A12D0C;
+			remoteInfo = "Blue Ham";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F7AE3E9F1AF7EB0700A12D0C /* Blue Ham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Ham.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7AE3EA31AF7EB0700A12D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7AE3EA41AF7EB0700A12D0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7AE3EA61AF7EB0700A12D0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F7AE3EA71AF7EB0700A12D0C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F7AE3EA91AF7EB0700A12D0C /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		F7AE3EAA1AF7EB0700A12D0C /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		F7AE3EAC1AF7EB0700A12D0C /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		F7AE3EAD1AF7EB0700A12D0C /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		F7AE3EB01AF7EB0700A12D0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7AE3EB21AF7EB0700A12D0C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F7AE3EB51AF7EB0700A12D0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F7AE3EBB1AF7EB0700A12D0C /* Blue HamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blue HamTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7AE3EC01AF7EB0700A12D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7AE3EC11AF7EB0700A12D0C /* Blue_HamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Blue_HamTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7AE3E9C1AF7EB0700A12D0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7AE3EB81AF7EB0700A12D0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7AE3E961AF7EB0700A12D0C = {
+			isa = PBXGroup;
+			children = (
+				F7AE3EA11AF7EB0700A12D0C /* Blue Ham */,
+				F7AE3EBE1AF7EB0700A12D0C /* Blue HamTests */,
+				F7AE3EA01AF7EB0700A12D0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7AE3EA01AF7EB0700A12D0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7AE3E9F1AF7EB0700A12D0C /* Blue Ham.app */,
+				F7AE3EBB1AF7EB0700A12D0C /* Blue HamTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7AE3EA11AF7EB0700A12D0C /* Blue Ham */ = {
+			isa = PBXGroup;
+			children = (
+				F7AE3EA61AF7EB0700A12D0C /* AppDelegate.h */,
+				F7AE3EA71AF7EB0700A12D0C /* AppDelegate.m */,
+				F7AE3EA91AF7EB0700A12D0C /* FirstViewController.h */,
+				F7AE3EAA1AF7EB0700A12D0C /* FirstViewController.m */,
+				F7AE3EAC1AF7EB0700A12D0C /* SecondViewController.h */,
+				F7AE3EAD1AF7EB0700A12D0C /* SecondViewController.m */,
+				F7AE3EAF1AF7EB0700A12D0C /* Main.storyboard */,
+				F7AE3EB21AF7EB0700A12D0C /* Images.xcassets */,
+				F7AE3EB41AF7EB0700A12D0C /* LaunchScreen.xib */,
+				F7AE3EA21AF7EB0700A12D0C /* Supporting Files */,
+			);
+			path = "Blue Ham";
+			sourceTree = "<group>";
+		};
+		F7AE3EA21AF7EB0700A12D0C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7AE3EA31AF7EB0700A12D0C /* Info.plist */,
+				F7AE3EA41AF7EB0700A12D0C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7AE3EBE1AF7EB0700A12D0C /* Blue HamTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7AE3EC11AF7EB0700A12D0C /* Blue_HamTests.m */,
+				F7AE3EBF1AF7EB0700A12D0C /* Supporting Files */,
+			);
+			path = "Blue HamTests";
+			sourceTree = "<group>";
+		};
+		F7AE3EBF1AF7EB0700A12D0C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7AE3EC01AF7EB0700A12D0C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7AE3E9E1AF7EB0700A12D0C /* Blue Ham */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7AE3EC51AF7EB0700A12D0C /* Build configuration list for PBXNativeTarget "Blue Ham" */;
+			buildPhases = (
+				F7AE3E9B1AF7EB0700A12D0C /* Sources */,
+				F7AE3E9C1AF7EB0700A12D0C /* Frameworks */,
+				F7AE3E9D1AF7EB0700A12D0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Blue Ham";
+			productName = "Blue Ham";
+			productReference = F7AE3E9F1AF7EB0700A12D0C /* Blue Ham.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F7AE3EBA1AF7EB0700A12D0C /* Blue HamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7AE3EC81AF7EB0700A12D0C /* Build configuration list for PBXNativeTarget "Blue HamTests" */;
+			buildPhases = (
+				F7AE3EB71AF7EB0700A12D0C /* Sources */,
+				F7AE3EB81AF7EB0700A12D0C /* Frameworks */,
+				F7AE3EB91AF7EB0700A12D0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7AE3EBD1AF7EB0700A12D0C /* PBXTargetDependency */,
+			);
+			name = "Blue HamTests";
+			productName = "Blue HamTests";
+			productReference = F7AE3EBB1AF7EB0700A12D0C /* Blue HamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7AE3E971AF7EB0700A12D0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Ethan Gill";
+				TargetAttributes = {
+					F7AE3E9E1AF7EB0700A12D0C = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					F7AE3EBA1AF7EB0700A12D0C = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = F7AE3E9E1AF7EB0700A12D0C;
+					};
+				};
+			};
+			buildConfigurationList = F7AE3E9A1AF7EB0700A12D0C /* Build configuration list for PBXProject "Blue Ham" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7AE3E961AF7EB0700A12D0C;
+			productRefGroup = F7AE3EA01AF7EB0700A12D0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7AE3E9E1AF7EB0700A12D0C /* Blue Ham */,
+				F7AE3EBA1AF7EB0700A12D0C /* Blue HamTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7AE3E9D1AF7EB0700A12D0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7AE3EB11AF7EB0700A12D0C /* Main.storyboard in Resources */,
+				F7AE3EB61AF7EB0700A12D0C /* LaunchScreen.xib in Resources */,
+				F7AE3EB31AF7EB0700A12D0C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7AE3EB91AF7EB0700A12D0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7AE3E9B1AF7EB0700A12D0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7AE3EAE1AF7EB0700A12D0C /* SecondViewController.m in Sources */,
+				F7AE3EA81AF7EB0700A12D0C /* AppDelegate.m in Sources */,
+				F7AE3EAB1AF7EB0700A12D0C /* FirstViewController.m in Sources */,
+				F7AE3EA51AF7EB0700A12D0C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7AE3EB71AF7EB0700A12D0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7AE3EC21AF7EB0700A12D0C /* Blue_HamTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7AE3EBD1AF7EB0700A12D0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7AE3E9E1AF7EB0700A12D0C /* Blue Ham */;
+			targetProxy = F7AE3EBC1AF7EB0700A12D0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7AE3EAF1AF7EB0700A12D0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7AE3EB01AF7EB0700A12D0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7AE3EB41AF7EB0700A12D0C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7AE3EB51AF7EB0700A12D0C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7AE3EC31AF7EB0700A12D0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7AE3EC41AF7EB0700A12D0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7AE3EC61AF7EB0700A12D0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Blue Ham/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F7AE3EC71AF7EB0700A12D0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Blue Ham/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F7AE3EC91AF7EB0700A12D0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Blue HamTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blue Ham.app/Blue Ham";
+			};
+			name = Debug;
+		};
+		F7AE3ECA1AF7EB0700A12D0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Blue HamTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blue Ham.app/Blue Ham";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7AE3E9A1AF7EB0700A12D0C /* Build configuration list for PBXProject "Blue Ham" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7AE3EC31AF7EB0700A12D0C /* Debug */,
+				F7AE3EC41AF7EB0700A12D0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7AE3EC51AF7EB0700A12D0C /* Build configuration list for PBXNativeTarget "Blue Ham" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7AE3EC61AF7EB0700A12D0C /* Debug */,
+				F7AE3EC71AF7EB0700A12D0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F7AE3EC81AF7EB0700A12D0C /* Build configuration list for PBXNativeTarget "Blue HamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7AE3EC91AF7EB0700A12D0C /* Debug */,
+				F7AE3ECA1AF7EB0700A12D0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7AE3E971AF7EB0700A12D0C /* Project object */;
+}
