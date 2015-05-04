@@ -11,6 +11,7 @@
 @interface SendViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIView *transmitButtonPlaceholder;
+@property (strong, nonatomic) IBOutlet UITextView *messageView;
 
 @end
 

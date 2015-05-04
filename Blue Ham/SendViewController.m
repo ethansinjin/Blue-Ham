@@ -26,6 +26,7 @@
     rectButton.shadowColor = [UIColor ht_jayDarkColor];
     [rectButton setTitle:@"Transmit" forState:UIControlStateNormal];
     [self.transmitButtonPlaceholder addSubview:rectButton];
+    
 }
 
 - (void)didReceiveMemoryWarning {
