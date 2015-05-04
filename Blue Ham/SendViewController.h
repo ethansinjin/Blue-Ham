@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  FirstViewController.h
 //  Blue Ham
 //
 //  Created by Ethan Gill on 5/4/15.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface SendViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIView *transmitButtonPlaceholder;
 
 @end
 

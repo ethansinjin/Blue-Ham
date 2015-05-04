@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Ethan Gill. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "ReceiveViewController.h"
 
-@interface SecondViewController ()
+@interface ReceiveViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation ReceiveViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
