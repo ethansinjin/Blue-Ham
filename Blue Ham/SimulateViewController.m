@@ -9,6 +9,7 @@
 #define HI_NIBBLE(b) (((b) >> 4) & 0x0F);
 #define LO_NIBBLE(b) ((b) & 0x0F);
 #define COMBINE_NIBBLES(a,b) (a << 4) | b;
+#define TOGGLE_BIT(a,b) (a ^= 1 << b); //toggle bit in data a at position b
 
 #import "SimulateViewController.h"
 #import "HTPressableButton.h"
@@ -80,8 +81,13 @@
     unsigned char receivedData[rlength];
     unsigned char decodedData[rlength];
     [completeData getBytes:receivedData length:rlength];
-    [self addToLog:[NSString stringWithFormat:@"Decoding Started"]];
+    [self addToLog:[NSString stringWithFormat:@"Decoding Started. Introducing errors"]];
     //we now have the received data present in receivedData
+    for (int i = 0; i < rlength; i++) {
+        //arbitrarily pick the bit to screw up. Let's do bit 5 for no real reason
+        //toggle it
+        TOGGLE_BIT(receivedData[i],5);
+    }
     for (int i = 0; i < rlength; i++) {
         unsigned char decodedChar = HammingMatrixDecode(receivedData[i]);
         [self addToLog:[NSString stringWithFormat:@"%x decodes to %x",receivedData[i],decodedChar]];
