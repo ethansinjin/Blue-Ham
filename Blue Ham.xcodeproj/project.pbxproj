@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7361BB21AF893F20020C819 /* JGBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = F7361BAC1AF893F20020C819 /* JGBeacon.m */; };
+		F7361BB31AF893F20020C819 /* JGReceiveBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = F7361BAE1AF893F20020C819 /* JGReceiveBeacon.m */; };
+		F7361BB41AF893F20020C819 /* JGSendBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = F7361BB01AF893F20020C819 /* JGSendBeacon.m */; };
 		F7AE3EA51AF7EB0700A12D0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE3EA41AF7EB0700A12D0C /* main.m */; };
 		F7AE3EA81AF7EB0700A12D0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE3EA71AF7EB0700A12D0C /* AppDelegate.m */; };
 		F7AE3EAB1AF7EB0700A12D0C /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE3EAA1AF7EB0700A12D0C /* SendViewController.m */; };
@@ -33,6 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F7361BAB1AF893F20020C819 /* JGBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGBeacon.h; sourceTree = "<group>"; };
+		F7361BAC1AF893F20020C819 /* JGBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGBeacon.m; sourceTree = "<group>"; };
+		F7361BAD1AF893F20020C819 /* JGReceiveBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGReceiveBeacon.h; sourceTree = "<group>"; };
+		F7361BAE1AF893F20020C819 /* JGReceiveBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGReceiveBeacon.m; sourceTree = "<group>"; };
+		F7361BAF1AF893F20020C819 /* JGSendBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGSendBeacon.h; sourceTree = "<group>"; };
+		F7361BB01AF893F20020C819 /* JGSendBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGSendBeacon.m; sourceTree = "<group>"; };
+		F7361BB11AF893F20020C819 /* TransferService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferService.h; sourceTree = "<group>"; };
 		F7AE3E9F1AF7EB0700A12D0C /* Blue Ham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Ham.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AE3EA31AF7EB0700A12D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7AE3EA41AF7EB0700A12D0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +88,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7361BB51AF893F80020C819 /* EGBeacon */ = {
+			isa = PBXGroup;
+			children = (
+				F7361BAB1AF893F20020C819 /* JGBeacon.h */,
+				F7361BAC1AF893F20020C819 /* JGBeacon.m */,
+				F7361BAD1AF893F20020C819 /* JGReceiveBeacon.h */,
+				F7361BAE1AF893F20020C819 /* JGReceiveBeacon.m */,
+				F7361BAF1AF893F20020C819 /* JGSendBeacon.h */,
+				F7361BB01AF893F20020C819 /* JGSendBeacon.m */,
+				F7361BB11AF893F20020C819 /* TransferService.h */,
+			);
+			name = EGBeacon;
+			sourceTree = "<group>";
+		};
 		F7AE3E961AF7EB0700A12D0C = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +123,7 @@
 		F7AE3EA11AF7EB0700A12D0C /* Blue Ham */ = {
 			isa = PBXGroup;
 			children = (
+				F7361BB51AF893F80020C819 /* EGBeacon */,
 				F7AE3ED81AF7F7C700A12D0C /* HTPressableButton */,
 				F7AE3EA61AF7EB0700A12D0C /* AppDelegate.h */,
 				F7AE3EA71AF7EB0700A12D0C /* AppDelegate.m */,
@@ -205,6 +230,7 @@
 				TargetAttributes = {
 					F7AE3E9E1AF7EB0700A12D0C = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = K2P452F89V;
 					};
 					F7AE3EBA1AF7EB0700A12D0C = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -260,9 +286,12 @@
 				F7AE3ED61AF7F7BC00A12D0C /* UIImage+HTButton.m in Sources */,
 				F7AE3EA81AF7EB0700A12D0C /* AppDelegate.m in Sources */,
 				F7AE3ED41AF7F7BC00A12D0C /* HTPressableButtonPrefs.m in Sources */,
+				F7361BB21AF893F20020C819 /* JGBeacon.m in Sources */,
 				F7AE3EAB1AF7EB0700A12D0C /* SendViewController.m in Sources */,
+				F7361BB31AF893F20020C819 /* JGReceiveBeacon.m in Sources */,
 				F7AE3ED31AF7F7BC00A12D0C /* HTPressableButton.m in Sources */,
 				F7AE3ED51AF7F7BC00A12D0C /* UIColor+HTColor.m in Sources */,
+				F7361BB41AF893F20020C819 /* JGSendBeacon.m in Sources */,
 				F7AE3EA51AF7EB0700A12D0C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,9 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Blue Ham/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -401,9 +434,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Blue Ham/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -460,6 +497,7 @@
 				F7AE3EC71AF7EB0700A12D0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7AE3EC81AF7EB0700A12D0C /* Build configuration list for PBXNativeTarget "Blue HamTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +506,7 @@
 				F7AE3ECA1AF7EB0700A12D0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

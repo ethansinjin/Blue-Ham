@@ -5,6 +5,25 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Simulate-->
+        <scene sceneID="TYv-MN-a2W">
+            <objects>
+                <viewController id="98r-1s-OWM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mYP-To-VwP"/>
+                        <viewControllerLayoutGuide type="bottom" id="BaT-yy-UIY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YYs-Bw-deg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Simulate" id="Z5n-Qg-kYo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zit-mj-gVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-978"/>
+        </scene>
         <!--Send-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
@@ -166,16 +185,16 @@
                                         <exclude reference="gXC-wQ-2fM"/>
                                         <exclude reference="pxV-7e-NPQ"/>
                                         <exclude reference="w5X-NA-R98"/>
+                                        <exclude reference="1iZ-TM-paA"/>
+                                        <exclude reference="678-sF-A8J"/>
+                                        <exclude reference="POm-LC-Ekp"/>
+                                        <exclude reference="Y8R-nZ-jzl"/>
                                         <exclude reference="1ng-k0-CRu"/>
                                         <exclude reference="1ty-bl-1Ft"/>
                                         <exclude reference="5CR-il-iDp"/>
                                         <exclude reference="6hR-gs-XBn"/>
                                         <exclude reference="Urr-Mt-a2C"/>
                                         <exclude reference="nJg-qj-LnY"/>
-                                        <exclude reference="1iZ-TM-paA"/>
-                                        <exclude reference="678-sF-A8J"/>
-                                        <exclude reference="POm-LC-Ekp"/>
-                                        <exclude reference="Y8R-nZ-jzl"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -211,6 +230,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Send" image="upload" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="log" destination="Oye-i4-ccH" id="X6o-SQ-u2O"/>
                         <outlet property="messageView" destination="1wG-UM-Odb" id="SAr-rQ-Vz6"/>
                         <outlet property="transmitButtonPlaceholder" destination="Ghi-oa-oUv" id="r7d-7k-ycx"/>
                     </connections>
@@ -370,6 +390,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Receive" image="download" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="log" destination="ULL-zB-lsd" id="k05-Fa-Kg6"/>
+                        <outlet property="messageView" destination="hwg-e1-P6k" id="UC3-7U-UA6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -451,11 +475,12 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="J0Z-0t-nuJ" kind="relationship" relationship="viewControllers" id="TzL-Oh-IL3"/>
+                        <segue destination="98r-1s-OWM" kind="relationship" relationship="viewControllers" id="Xpj-Fl-KHh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-24" y="-194"/>
         </scene>
     </scenes>
     <resources>

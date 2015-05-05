@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JGBeacon.h"
 
-@interface ReceiveViewController : UIViewController
+@interface ReceiveViewController : UIViewController 
 
+@property (strong, nonatomic) IBOutlet UITextView *log;
+@property (strong, nonatomic) IBOutlet UITextView *messageView;
+
+- (void)addToLog:(NSString*)string;
 
 @end
 

@@ -12,6 +12,9 @@
 
 @property (strong, nonatomic) IBOutlet UIView *transmitButtonPlaceholder;
 @property (strong, nonatomic) IBOutlet UITextView *messageView;
+@property (strong, nonatomic) IBOutlet UITextView *log;
+
+- (void)addToLog:(NSString*)string;
 
 @end
 

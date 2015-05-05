@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JGBeacon.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, JGBeaconDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic, strong) JGBeacon *beacon;
 
 @end
 

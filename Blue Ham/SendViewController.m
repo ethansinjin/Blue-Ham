@@ -9,6 +9,7 @@
 #import "SendViewController.h"
 #import "HTPressableButton.h"
 #import "UIColor+HTColor.h"
+#import "AppDelegate.h"
 
 @interface SendViewController ()
 
@@ -27,11 +28,27 @@
     [rectButton setTitle:@"Transmit" forState:UIControlStateNormal];
     [self.transmitButtonPlaceholder addSubview:rectButton];
     
+    [rectButton addTarget:self
+                 action:@selector(sendData)
+       forControlEvents:UIControlEventTouchUpInside];
+    
+    self.log.text = @"";
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)sendData {
+    NSData *plainData = [self.messageView.text dataUsingEncoding:NSUTF8StringEncoding];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [self addToLog:[NSString stringWithFormat:@"Sending String: %@",self.messageView.text]];
+    [appDelegate.beacon queueDataToSend:plainData];
+}
+
+- (void)addToLog:(NSString*)string {
+    self.log.text = [NSString stringWithFormat:@"%@\n%@",string, self.log.text];
 }
 
 @end
