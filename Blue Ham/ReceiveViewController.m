@@ -9,8 +9,9 @@
 #import "ReceiveViewController.h"
 #import "hamming.h"
 
-#define HI_NIBBLE(b) (((b) >> 4) & 0x0F)
-#define LO_NIBBLE(b) ((b) & 0x0F)
+#define HI_NIBBLE(b) (((b) >> 4) & 0x0F);
+#define LO_NIBBLE(b) ((b) & 0x0F);
+#define COMBINE_NIBBLES(a,b) (a << 4) | b;
 
 @interface ReceiveViewController ()
 
@@ -36,7 +37,7 @@
 - (void) processReceivedData:(NSNotification *)notification {
     //do all the logging and stuff here
     NSData *data = [notification object];
-    [self addToLog:@"Received a valid NSData object. Decoding"];
+    [self addToLog:[NSString stringWithFormat:@"Received Encoded Message: %@",data]];
     unsigned long rlength = [data length];
     unsigned char receivedData[rlength];
     unsigned char decodedData[rlength];
@@ -44,9 +45,19 @@
     //we now have the received data present in receivedData
     for (int i = 0; i < rlength; i++) {
         unsigned char decodedChar = HammingMatrixDecode(receivedData[i]);
+        NSLog(@"%x becomes %x",receivedData[i],decodedChar);
         decodedData[i] = decodedChar;
     }
-    NSData *completeData = [NSData dataWithBytes:(const void *)decodedData length:sizeof(unsigned char)*rlength];
+    //we now need to combine the bytes to receive the original message
+    unsigned char combinedData[rlength/2];
+    int counter = 0;
+    for (int i = 0; i < rlength/2; i++) {
+        combinedData[i] = COMBINE_NIBBLES(decodedData[counter], decodedData[counter+1]);
+        counter += 2;
+        NSLog(@"%x and %x combine to %x",decodedData[counter-2],decodedData[counter-1],combinedData[i]);
+    }
+    NSData *completeData = [NSData dataWithBytes:(const void *)combinedData length:sizeof(unsigned char)*rlength/2];
+    [self addToLog:[NSString stringWithFormat:@"decoded unsigned char representation: %@",completeData]];
     NSString *decodedString = [[NSString alloc] initWithData:completeData encoding:NSUTF8StringEncoding];
     [self updateReceivedMessage:decodedString];
 }
