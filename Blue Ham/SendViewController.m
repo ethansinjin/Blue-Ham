@@ -10,6 +10,7 @@
 #import "HTPressableButton.h"
 #import "UIColor+HTColor.h"
 #import "AppDelegate.h"
+#import "hamming.h"
 
 @interface SendViewController ()
 
@@ -42,9 +43,21 @@
 
 - (void)sendData {
     NSData *plainData = [self.messageView.text dataUsingEncoding:NSUTF8StringEncoding];
+    [self addToLog:[NSString stringWithFormat:@"Encoding String: %@",self.messageView.text]];
+    unsigned long rlength = [plainData length];
+    unsigned char rawData[rlength];
+    unsigned char encodedData[rlength];
+    [plainData getBytes:rawData length:rlength];
+    //we now have the raw data present in rawData
+    for (int i = 0; i < rlength; i++) {
+        unsigned char encodedChar = HammingMatrixEncode(rawData[i]);
+        encodedData[i] = encodedChar;
+    }
+    NSData *completeData = [NSData dataWithBytes:(const void *)encodedData length:sizeof(unsigned char)*rlength];
+    
+    //send the completed data
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [self addToLog:[NSString stringWithFormat:@"Sending String: %@",self.messageView.text]];
-    [appDelegate.beacon queueDataToSend:plainData];
+    [appDelegate.beacon queueDataToSend:completeData];
 }
 
 - (void)addToLog:(NSString*)string {

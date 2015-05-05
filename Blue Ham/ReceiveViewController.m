@@ -7,6 +7,7 @@
 //
 
 #import "ReceiveViewController.h"
+#import "hamming.h"
 
 @interface ReceiveViewController ()
 

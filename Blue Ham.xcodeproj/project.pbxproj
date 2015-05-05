@@ -23,6 +23,7 @@
 		F7AE3ED51AF7F7BC00A12D0C /* UIColor+HTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE3ED01AF7F7BC00A12D0C /* UIColor+HTColor.m */; };
 		F7AE3ED61AF7F7BC00A12D0C /* UIImage+HTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE3ED21AF7F7BC00A12D0C /* UIImage+HTButton.m */; };
 		F7AE3EDA1AF7FA1300A12D0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AE3ED91AF7FA1300A12D0C /* UIKit.framework */; };
+		F7DC652D1AF8ACF200211425 /* hamming.c in Sources */ = {isa = PBXBuildFile; fileRef = F7DC652B1AF8ACF200211425 /* hamming.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		F7AE3ED11AF7F7BC00A12D0C /* UIImage+HTButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HTButton.h"; sourceTree = "<group>"; };
 		F7AE3ED21AF7F7BC00A12D0C /* UIImage+HTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HTButton.m"; sourceTree = "<group>"; };
 		F7AE3ED91AF7FA1300A12D0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F7DC652B1AF8ACF200211425 /* hamming.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hamming.c; sourceTree = "<group>"; };
+		F7DC652C1AF8ACF200211425 /* hamming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hamming.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,7 @@
 		F7AE3EA11AF7EB0700A12D0C /* Blue Ham */ = {
 			isa = PBXGroup;
 			children = (
+				F7DC652E1AF8ACF600211425 /* Hamming */,
 				F7361BB51AF893F80020C819 /* EGBeacon */,
 				F7AE3ED81AF7F7C700A12D0C /* HTPressableButton */,
 				F7AE3EA61AF7EB0700A12D0C /* AppDelegate.h */,
@@ -179,6 +183,15 @@
 				F7AE3ED21AF7F7BC00A12D0C /* UIImage+HTButton.m */,
 			);
 			name = HTPressableButton;
+			sourceTree = "<group>";
+		};
+		F7DC652E1AF8ACF600211425 /* Hamming */ = {
+			isa = PBXGroup;
+			children = (
+				F7DC652B1AF8ACF200211425 /* hamming.c */,
+				F7DC652C1AF8ACF200211425 /* hamming.h */,
+			);
+			name = Hamming;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +306,7 @@
 				F7AE3ED51AF7F7BC00A12D0C /* UIColor+HTColor.m in Sources */,
 				F7361BB41AF893F20020C819 /* JGSendBeacon.m in Sources */,
 				F7AE3EA51AF7EB0700A12D0C /* main.m in Sources */,
+				F7DC652D1AF8ACF200211425 /* hamming.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
