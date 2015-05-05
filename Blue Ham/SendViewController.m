@@ -6,6 +6,9 @@
 //  Copyright (c) 2015 Ethan Gill. All rights reserved.
 //
 
+#define HI_NIBBLE(b) (((b) >> 4) & 0x0F)
+#define LO_NIBBLE(b) ((b) & 0x0F)
+
 #import "SendViewController.h"
 #import "HTPressableButton.h"
 #import "UIColor+HTColor.h"
@@ -34,6 +37,7 @@
        forControlEvents:UIControlEventTouchUpInside];
     
     self.log.text = @"";
+    self.messageView.text = @"Test";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,6 +55,7 @@
     //we now have the raw data present in rawData
     for (int i = 0; i < rlength; i++) {
         unsigned char encodedChar = HammingMatrixEncode(rawData[i]);
+        NSLog(@"%x becomes %x",rawData[i],encodedChar);
         encodedData[i] = encodedChar;
     }
     NSData *completeData = [NSData dataWithBytes:(const void *)encodedData length:sizeof(unsigned char)*rlength];
@@ -58,6 +63,24 @@
     //send the completed data
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate.beacon queueDataToSend:completeData];
+    
+    unsigned char receivedData[rlength];
+    unsigned char decodedData[rlength];
+    [completeData getBytes:receivedData length:rlength];
+    NSLog(@"Decoding:\n");
+    //we now have the received data present in receivedData
+    for (int i = 0; i < rlength; i++) {
+        unsigned char decodedChar = HammingMatrixDecode(receivedData[i]);
+        NSLog(@"%x becomes %x",receivedData[i],decodedChar);
+        decodedData[i] = decodedChar;
+    }
+    NSData *testCData = [NSData dataWithBytes:(const void *)decodedData length:sizeof(unsigned char)*rlength];
+    if (plainData == testCData) {
+        [self addToLog:@"Local Decoding successful"];
+    } else {
+        [self addToLog:@"Local Decoding failed"];
+    }
+    
 }
 
 - (void)addToLog:(NSString*)string {

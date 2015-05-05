@@ -9,6 +9,9 @@
 #import "ReceiveViewController.h"
 #import "hamming.h"
 
+#define HI_NIBBLE(b) (((b) >> 4) & 0x0F)
+#define LO_NIBBLE(b) ((b) & 0x0F)
+
 @interface ReceiveViewController ()
 
 @end
@@ -33,10 +36,19 @@
 - (void) processReceivedData:(NSNotification *)notification {
     //do all the logging and stuff here
     NSData *data = [notification object];
-    NSString *decodedString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    [self addToLog:@"Received a valid NSData object"];
+    [self addToLog:@"Received a valid NSData object. Decoding"];
+    unsigned long rlength = [data length];
+    unsigned char receivedData[rlength];
+    unsigned char decodedData[rlength];
+    [data getBytes:receivedData length:rlength];
+    //we now have the received data present in receivedData
+    for (int i = 0; i < rlength; i++) {
+        unsigned char decodedChar = HammingMatrixDecode(receivedData[i]);
+        decodedData[i] = decodedChar;
+    }
+    NSData *completeData = [NSData dataWithBytes:(const void *)decodedData length:sizeof(unsigned char)*rlength];
+    NSString *decodedString = [[NSString alloc] initWithData:completeData encoding:NSUTF8StringEncoding];
     [self updateReceivedMessage:decodedString];
-
 }
 
 - (void) subscribed {
