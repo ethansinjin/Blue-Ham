@@ -1,8 +1,8 @@
 //
-//  FirstViewController.m
+//  SimulateViewController.m
 //  Blue Ham
 //
-//  Created by Ethan Gill on 5/4/15.
+//  Created by Ethan Gill on 5/5/15.
 //  Copyright (c) 2015 Ethan Gill. All rights reserved.
 //
 
@@ -10,40 +10,42 @@
 #define LO_NIBBLE(b) ((b) & 0x0F);
 #define COMBINE_NIBBLES(a,b) (a << 4) | b;
 
-#import "SendViewController.h"
+#import "SimulateViewController.h"
 #import "HTPressableButton.h"
 #import "UIColor+HTColor.h"
 #import "AppDelegate.h"
 #import "hamming.h"
 
-@interface SendViewController ()
+@interface SimulateViewController ()
 
 @end
 
-@implementation SendViewController
+@implementation SimulateViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
     CGRect frame = CGRectMake(0,0,250,50);
     HTPressableButton *rectButton = [[HTPressableButton alloc] initWithFrame:frame buttonStyle:HTPressableButtonStyleRect];
-    rectButton.buttonColor = [UIColor ht_blueJeansColor];
-    rectButton.shadowColor = [UIColor ht_blueJeansDarkColor];
-    [rectButton setTitle:@"Transmit" forState:UIControlStateNormal];
+    rectButton.buttonColor = [UIColor ht_leadColor];
+    rectButton.shadowColor = [UIColor ht_leadDarkColor];
+    [rectButton setTitle:@"Simulate" forState:UIControlStateNormal];
     [self.transmitButtonPlaceholder addSubview:rectButton];
     
     [rectButton addTarget:self
-                 action:@selector(sendData)
-       forControlEvents:UIControlEventTouchUpInside];
+                   action:@selector(sendData)
+         forControlEvents:UIControlEventTouchUpInside];
     
     self.log.text = @"";
-    self.messageView.text = @"Test";
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)addToLog:(NSString*)string {
+    self.log.text = [NSString stringWithFormat:@"%@\n%@",string, self.log.text];
 }
 
 - (void)sendData {
@@ -63,29 +65,26 @@
         counter++;
         splitData[counter] = LO_NIBBLE(rawData[i]);
         counter++;
-        NSLog(@"%x split to %x and %x",rawData[i],splitData[counter-2],splitData[counter-1]);
+        [self addToLog:[NSString stringWithFormat:@"%x split to %x and %x",rawData[i],splitData[counter-2],splitData[counter-1]]];
     }
     for (int i = 0; i < rlength*2; i++) {
         unsigned char encodedChar = HammingMatrixEncode(splitData[i]);
-        NSLog(@"%x becomes %x",splitData[i],encodedChar);
+        [self addToLog:[NSString stringWithFormat:@"%x encodes to %x",splitData[i],encodedChar]];
         encodedData[i] = encodedChar;
     }
     NSData *completeData = [NSData dataWithBytes:(const void *)encodedData length:sizeof(unsigned char)*rlength*2];
     
-    //send the completed data
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [appDelegate.beacon queueDataToSend:completeData];
-    [self addToLog:[NSString stringWithFormat:@"Transmitted Encoded Message: %@",completeData]];
+    [self addToLog:[NSString stringWithFormat:@"Encoded Message: %@",completeData]];
     //perform the steps in reverse to verify that the data can be locally decoded
     rlength = [completeData length];
     unsigned char receivedData[rlength];
     unsigned char decodedData[rlength];
     [completeData getBytes:receivedData length:rlength];
-    NSLog(@"Decoding:\n");
+    [self addToLog:[NSString stringWithFormat:@"Decoding Started"]];
     //we now have the received data present in receivedData
     for (int i = 0; i < rlength; i++) {
         unsigned char decodedChar = HammingMatrixDecode(receivedData[i]);
-        NSLog(@"%x becomes %x",receivedData[i],decodedChar);
+        [self addToLog:[NSString stringWithFormat:@"%x decodes to %x",receivedData[i],decodedChar]];
         decodedData[i] = decodedChar;
     }
     //we now need to combine the bytes to receive the original message
@@ -94,9 +93,10 @@
     for (int i = 0; i < rlength/2; i++) {
         combinedData[i] = COMBINE_NIBBLES(decodedData[counter], decodedData[counter+1]);
         counter += 2;
-        NSLog(@"%x and %x combine to %x",decodedData[counter-2],decodedData[counter-1],combinedData[i]);
+        [self addToLog:[NSString stringWithFormat:@"%x and %x combine to %x",decodedData[counter-2],decodedData[counter-1],combinedData[i]]];
     }
     NSData *testCData = [NSData dataWithBytes:(const void *)combinedData length:sizeof(unsigned char)*rlength/2];
+    [self addToLog:[NSString stringWithFormat:@"Decoded unsigned char representation: %@", testCData]];
     if ([plainData isEqualToData:testCData]) {
         [self addToLog:@"Local Decode Verification Successful"];
     } else {
@@ -105,8 +105,14 @@
     
 }
 
-- (void)addToLog:(NSString*)string {
-    self.log.text = [NSString stringWithFormat:@"%@\n%@",string, self.log.text];
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
+*/
 
 @end

@@ -70,12 +70,12 @@
     [self addToLog:@"Unsubscribed from a broadcast"];
 }
 
-- (void)addToLog:(NSString*)string {
-    self.log.text = [NSString stringWithFormat:@"%@\n%@",string, self.log.text];
-}
-
 - (void)updateReceivedMessage:(NSString*)string {
     self.messageView.text = [NSString stringWithFormat:@"%@",string];
+}
+
+- (void)addToLog:(NSString*)string {
+    self.log.text = [NSString stringWithFormat:@"%@\n%@",string, self.log.text];
 }
 
 @end

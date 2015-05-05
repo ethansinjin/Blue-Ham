@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F72AD9191AF9239B0043E987 /* SimulateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F72AD9181AF9239B0043E987 /* SimulateViewController.m */; };
 		F7361BB21AF893F20020C819 /* JGBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = F7361BAC1AF893F20020C819 /* JGBeacon.m */; };
 		F7361BB31AF893F20020C819 /* JGReceiveBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = F7361BAE1AF893F20020C819 /* JGReceiveBeacon.m */; };
 		F7361BB41AF893F20020C819 /* JGSendBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = F7361BB01AF893F20020C819 /* JGSendBeacon.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F72AD9171AF9239B0043E987 /* SimulateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulateViewController.h; sourceTree = "<group>"; };
+		F72AD9181AF9239B0043E987 /* SimulateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulateViewController.m; sourceTree = "<group>"; };
 		F7361BAB1AF893F20020C819 /* JGBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGBeacon.h; sourceTree = "<group>"; };
 		F7361BAC1AF893F20020C819 /* JGBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGBeacon.m; sourceTree = "<group>"; };
 		F7361BAD1AF893F20020C819 /* JGReceiveBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGReceiveBeacon.h; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				F7AE3EAA1AF7EB0700A12D0C /* SendViewController.m */,
 				F7AE3EAC1AF7EB0700A12D0C /* ReceiveViewController.h */,
 				F7AE3EAD1AF7EB0700A12D0C /* ReceiveViewController.m */,
+				F72AD9171AF9239B0043E987 /* SimulateViewController.h */,
+				F72AD9181AF9239B0043E987 /* SimulateViewController.m */,
 				F7AE3EAF1AF7EB0700A12D0C /* Main.storyboard */,
 				F7AE3EB21AF7EB0700A12D0C /* Images.xcassets */,
 				F7AE3EB41AF7EB0700A12D0C /* LaunchScreen.xib */,
@@ -296,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7AE3EAE1AF7EB0700A12D0C /* ReceiveViewController.m in Sources */,
+				F72AD9191AF9239B0043E987 /* SimulateViewController.m in Sources */,
 				F7AE3ED61AF7F7BC00A12D0C /* UIImage+HTButton.m in Sources */,
 				F7AE3EA81AF7EB0700A12D0C /* AppDelegate.m in Sources */,
 				F7AE3ED41AF7F7BC00A12D0C /* HTPressableButtonPrefs.m in Sources */,
